@@ -7,7 +7,9 @@ import static java.util.stream.Collectors.*;
 
 public class JavaFeatures {
 
-    /**-----------------Main----------------------*/
+    /**
+     * -----------------Main----------------------
+     */
 
     public static void main(String[] args) {
 
@@ -21,6 +23,10 @@ public class JavaFeatures {
         studentList.add(new Student("Vali", 45, 4));
         studentList.add(new Student("Teo", 55, 5));
 
+        //Get student age
+        System.out.println("-----------Student ages-----------");
+        getStudentAge();
+
         //Create courses
         courseList.add(new Course("Math", 1));
         courseList.add(new Course("Science", 1));
@@ -28,26 +34,39 @@ public class JavaFeatures {
         courseList.add(new Course("Language", 2));
 
         //Display average grades
+        System.out.println("-----------Average grades-----------");
         displayAverageGrade();
 
         //Transform courses to json
         transformCoursesToJson();
 
         //Allocate courses to students
+        System.out.println("-----------Allocate courses-----------");
         allocateCoursesToStudents();
 
         //Allocate grades to students
+        System.out.println("-----------Allocate grades-----------");
         allocateGradesToStudents();
     }
 
-    /**-----------------Lists----------------------*/
+    /**
+     * -----------------Lists----------------------
+     */
 
     public static List<Student> studentList = new ArrayList<>();
     public static List<Course> courseList = new ArrayList<>();
     public static List<String> courseListJson = new ArrayList<>();
 
 
-    /**-----------------Methods----------------------*/
+    /**
+     * -----------------Methods----------------------
+     */
+
+    private static void getStudentAge() {
+        for (Student student : studentList) {
+            System.out.println(student.getName() + " is " + student.getAge() + " years old. ");
+        }
+    }
 
     private static void displayAverageGrade() {
         //Get all names

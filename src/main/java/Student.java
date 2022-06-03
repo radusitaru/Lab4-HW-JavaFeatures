@@ -5,14 +5,17 @@ import java.util.Random;
 public record Student(String name, LocalDate birthDate, int grade) {
 
     /**-----------------Variables----------------------*/
+
     static Random x = new Random();
 
     /**-----------------Constructor----------------------*/
+
     public Student(String name, int age, int grade) {
         this(name, LocalDate.of(LocalDate.now().getYear() - age, x.nextInt(1, 12), x.nextInt(1, 28)), grade);
     }
 
     /**-----------------Methods----------------------*/
+
     public int getGrade() {
         return grade;
     }

@@ -8,6 +8,7 @@ import static java.util.stream.Collectors.*;
 public class JavaFeatures {
 
     /**-----------------Main----------------------*/
+
     public static void main(String[] args) {
 
         //Create student based on birthdate
@@ -40,6 +41,7 @@ public class JavaFeatures {
     }
 
     /**-----------------Lists----------------------*/
+
     public static List<Student> studentList = new ArrayList<>();
     public static List<Course> courseList = new ArrayList<>();
     public static List<String> courseListJson = new ArrayList<>();
@@ -49,9 +51,9 @@ public class JavaFeatures {
 
     private static void displayAverageGrade() {
         //Get all names
-        String studentNames = studentList.stream()
+        String studentNames = String.valueOf(studentList.stream()
                 .map(Student::getName)
-                .toString();
+                .toList());
 
         //Get average grade
         double averageGrade = studentList.
@@ -64,7 +66,7 @@ public class JavaFeatures {
                         (sum, count) -> sum / count));
 
         //Print message
-        System.out.println(studentNames + "received an average grade of: " + averageGrade);
+        System.out.println(studentNames + " received an average grade of: " + averageGrade);
     }
 
 

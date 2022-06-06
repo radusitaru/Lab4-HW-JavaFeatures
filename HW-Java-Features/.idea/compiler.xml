@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Curs4-HW-LogicalSwitch" />
+        <module name="Curs4-HW-JavaFeatures" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Curs4-HW-LogicalSwitch" target="18" />
+      <module name="HW-Java-Features" target="18" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
